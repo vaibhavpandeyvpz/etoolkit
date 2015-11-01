@@ -1,0 +1,27 @@
+<et-header></et-header>
+<div class="et-content">
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+            <label class="et-label" for="txtc-text">Text</label>
+            <textarea id="txtc-text" class="pure-input-1" rows="5" placeholder="Enter text here" ng-change="changed()" ng-model="txtc_text"></textarea>
+        </fieldset>
+        <table class="pure-table pure-table-bordered et-table">
+            <thead>
+            <tr>
+                <th>Lines</th>
+                <th>Words</th>
+                <th>Characters</th>
+                <th>Spaces</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ txtc_lines }}</td>
+                <td>{{ txtc_words }}</td>
+                <td>{{ txtc_characters }}</td>
+                <td>{{ txtc_spaces }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+</div>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="eToolkitApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <meta name="description" content="eToolkit is an online toolkit to perform common tasks like Random Passwords, Base64 decode/encode, MD5/SHA-1/SHA-224/SHA-256/SHA-512 Hash, Character Counting">
+    <meta name="keywords" content="random password generator, base64 decode, base64 encode, word count">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.css">
+    <script type="text/javascript">
+        window.paceOptions = {
+            document: true,
+            eventLag: true,
+            restartOnPushState: true,
+            restartOnRequestAfter: true,
+            ajax: { trackMethods: [ 'POST','GET'] }
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+    <link href="//yui.yahooapis.com/pure/0.6.0/pure-min.css" rel="stylesheet">
+    <!--[if lte IE 8]>
+    <link href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css" rel="stylesheet">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css" rel="stylesheet">
+    <!--<![endif]-->
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body>
+<div class="et-layout" ng-class="{'active' : collapse}">
+    <a href="javascript:" class="et-menu-toggle" ng-class="{'active' : collapse}" ng-click='collapse=!collapse'><span></span></a>
+    <div class="et-menu" ng-class="{'active' : collapse}">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="/#/home">{{ title }}</a>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item">
+                    <a href="/#/passwords-generator" class="pure-menu-link">Passwords Generator</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="/#/base64-encoder-decoder" class="pure-menu-link">Base64 En/Decode</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="/#/hash-calculator" class="pure-menu-link">Hash Calculator</a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="/#/text-counter" class="pure-menu-link">Text Counter</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div ng-view></div>
+    <div class="footer">
+        <p class="legal">
+            <strong>{{ title }}</strong> is built with <img class="emoji" draggable="false" alt="❤️" src="https://twemoji.maxcdn.com/16x16/2764.png"> for <a href="https://angularjs.org" target="_blank">Angular</a> using <a href="http://purecss.io" target="_blank">Pure</a>. <a href="http://www.vaibhavpandey.com" target="_blank">Vaibhav Pandey</a> &copy; 2015. All rights reserved.
+        </p>
+    </div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-cookies.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+<script src="//cdn.rawgit.com/satazor/SparkMD5/master/spark-md5.min.js"></script>
+<script src="//cdn.rawgit.com/Caligatio/jsSHA/master/src/sha.js"></script>
+<script>
+    if ((typeof atob == 'undefined') || (typeof btoa == 'undefined')) {
+        document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/Base64/0.3.0/base64.min.js">\x3C/script>');
+    }
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
