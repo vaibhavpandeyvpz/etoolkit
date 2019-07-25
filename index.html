@@ -6,23 +6,23 @@
     <title>{{ title }}</title>
     <meta name="description" content="eToolkit is an online toolkit to perform common tasks like Random Passwords, Base64 decode/encode, MD5/SHA-1/SHA-224/SHA-256/SHA-512 Hash, Character Counting">
     <meta name="keywords" content="random password generator, base64 decode, base64 encode, word count">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.css">
+    <link rel="stylesheet" href="https://unpkg.com/pace-js@1.0.2/themes/blue/pace-theme-flash.css">
     <script type="text/javascript">
         window.paceOptions = {
             document: true,
             eventLag: true,
             restartOnPushState: true,
             restartOnRequestAfter: true,
-            ajax: { trackMethods: [ 'POST','GET'] }
+            ajax: { trackMethods: ['POST','GET'] }
         };
     </script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
-    <link href="//yui.yahooapis.com/pure/0.6.0/pure-min.css" rel="stylesheet">
+    <script src="https://unpkg.com/pace-js@1.0.2/pace.min.js"></script>
+    <link href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" rel="stylesheet">
     <!--[if lte IE 8]>
-    <link href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css" rel="stylesheet">
+    <link href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-old-ie-min.css" rel="stylesheet">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-    <link href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css" rel="stylesheet">
+    <link href="https://unpkg.com/purecss@1.0.1/build/grids-responsive-min.css" rel="stylesheet">
     <!--<![endif]-->
     <link href="css/app.css" rel="stylesheet">
     <script>
@@ -63,14 +63,14 @@
         </p>
     </div>
 </div>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-cookies.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
-<script src="//cdn.rawgit.com/satazor/SparkMD5/master/spark-md5.min.js"></script>
-<script src="//cdn.rawgit.com/Caligatio/jsSHA/master/src/sha.js"></script>
+<script src="https://unpkg.com/angular@1.7.8/angular.min.js"></script>
+<script src="https://unpkg.com/angular-cookies@1.7.8/angular-cookies.min.js"></script>
+<script src="https://unpkg.com/angular-route@1.7.8/angular-route.min.js"></script>
+<script src="https://unpkg.com/spark-md5@3.0.0/spark-md5.min.js"></script>
+<script src="https://unpkg.com/jssha@2.3.1/src/sha.js"></script>
 <script>
     if ((typeof atob == 'undefined') || (typeof btoa == 'undefined')) {
-        document.write('<script src="//cdnjs.cloudflare.com/ajax/libs/Base64/0.3.0/base64.min.js">\x3C/script>');
+        document.write('<script src="https://unpkg.com/Base64@1.0.2/base64.js">\x3C/script>');
     }
 </script>
 <script src="js/app.js"></script>
