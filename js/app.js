@@ -7,9 +7,9 @@ var app = angular.module('eToolkitApp', [
     'ngRoute'
 ]);
 
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
-        .when('/home', {
+        .when('/', {
             controller: 'HomeCtrl',
             templateUrl: 'view/home.html'
         })
@@ -30,8 +30,9 @@ app.config(function ($routeProvider) {
             templateUrl: 'view/text-counter.html'
         })
         .otherwise({
-            redirectTo: '/home'
+            redirectTo: '/'
         });
+        $locationProvider.html5Mode(true);
 });
 
 /**

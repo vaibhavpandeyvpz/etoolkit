@@ -1,3 +1,8 @@
+body,
+.pure-g [class*="pure-u"] {
+    font-family: "Arimo", sans-serif;
+}
+
 .et-layout,
 .et-menu,
 .et-menu-toggle {

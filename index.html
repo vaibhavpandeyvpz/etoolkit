@@ -7,6 +7,7 @@
     <meta name="description" content="eToolkit is an online toolkit to perform common tasks like Random Passwords, Base64 decode/encode, MD5/SHA-1/SHA-224/SHA-256/SHA-512 Hash, Character Counting">
     <meta name="keywords" content="random password generator, base64 decode, base64 encode, word count">
     <link rel="stylesheet" href="https://unpkg.com/pace-js@1.0.2/themes/blue/pace-theme-flash.css">
+    <base href="/etoolkit/">
     <script type="text/javascript">
         window.paceOptions = {
             document: true,
@@ -39,19 +40,19 @@
     <a href="javascript:" class="et-menu-toggle" ng-class="{'active' : collapse}" ng-click='collapse=!collapse'><span></span></a>
     <div class="et-menu" ng-class="{'active' : collapse}">
         <div class="pure-menu">
-            <a class="pure-menu-heading" href="#/home">{{ title }}</a>
+            <a class="pure-menu-heading" href="home">{{ title }}</a>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item">
-                    <a href="#/passwords-generator" class="pure-menu-link">Passwords Generator</a>
+                    <a href="passwords-generator" class="pure-menu-link">Passwords Generator</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a href="#/base64-encoder-decoder" class="pure-menu-link">Base64 En/Decode</a>
+                    <a href="base64-encoder-decoder" class="pure-menu-link">Base64 En/Decode</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a href="#/hash-calculator" class="pure-menu-link">Hash Calculator</a>
+                    <a href="hash-calculator" class="pure-menu-link">Hash Calculator</a>
                 </li>
                 <li class="pure-menu-item">
-                    <a href="#/text-counter" class="pure-menu-link">Text Counter</a>
+                    <a href="text-counter" class="pure-menu-link">Text Counter</a>
                 </li>
             </ul>
         </div>
@@ -74,5 +75,18 @@
     }
 </script>
 <script src="js/app.js"></script>
+<script>
+    WebFontConfig = {
+        google: {
+            families: ['Arimo:400,700']
+        }
+    };
+    (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+</script>
 </body>
 </html>
