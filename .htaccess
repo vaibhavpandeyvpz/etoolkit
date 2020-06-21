@@ -1,7 +1,0 @@
-DirectoryIndex index.html
-
-Options -Indexes
-
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.html [QSA,L]

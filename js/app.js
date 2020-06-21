@@ -1,13 +1,9 @@
-/**
- * Created by vaibhav on 1/11/15.
- */
-
 var app = angular.module('eToolkitApp', [
     'ngCookies',
     'ngRoute'
 ]);
 
-app.config(function ($routeProvider, $locationProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
             controller: 'HomeCtrl',
@@ -32,7 +28,6 @@ app.config(function ($routeProvider, $locationProvider) {
         .otherwise({
             redirectTo: '/'
         });
-        $locationProvider.html5Mode(true);
 });
 
 /**
@@ -48,7 +43,7 @@ app.directive('etHeader', function () {
             '    <h1>{{ page }}</h1>',
             "    <h2>{{ description }}</h2>",
             "</div>"
-        ].join("")
+        ].join('')
     };
 });
 
@@ -139,7 +134,7 @@ app.controller('PassGenCtrl', function ($scope, CookieUtils, MathUtils) {
     $scope.description = 'Generate in-browser, random & therefore, secure passwords';
     $scope.page = 'Passwords Generator';
     $scope.passgen_lalpha = CookieUtils.get('passgen_lalpha', 'true') == 'true';
-    $scope.passgen_length = parseInt(CookieUtils.get('passgen_length', 16));
+    $scope.passgen_length = CookieUtils.get('passgen_length', '16');
     $scope.passgen_noambigious = CookieUtils.get('passgen_noambigious', 'true') == 'true';
     $scope.passgen_noduplicate = CookieUtils.get('passgen_noduplicate', 'false') == 'true';
     $scope.passgen_nospecial = CookieUtils.get('passgen_nospecial', 'false') == 'true';
@@ -175,7 +170,7 @@ app.controller('PassGenCtrl', function ($scope, CookieUtils, MathUtils) {
             }
         }
         var password = "";
-        for (var i = 0; i < $scope.passgen_length; i++) {
+        for (var i = 0; i < parseInt($scope.passgen_length); i++) {
             var char = table[MathUtils.getRandom(0, table.length - 1)];
             if ($scope.passgen_noduplicate && (password.indexOf(char) > -1)) {
                 i--;
